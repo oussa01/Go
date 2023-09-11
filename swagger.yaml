@@ -1,0 +1,24 @@
+info: {}
+paths:
+    /admin/company/:
+        get:
+            description: Get companies list
+            operationId: listCompany
+            responses:
+                "200":
+                    $ref: '#/responses/GetCompanies'
+                "401":
+                    $ref: '#/responses/CommonError'
+            security:
+                - apiKey:
+                    - '[]'
+            tags:
+                - admin
+    /create:
+        post:
+            description: '201: newCar created'
+            operationId: car
+            tags:
+                - add a car
+                
+swagger: "2.0"
